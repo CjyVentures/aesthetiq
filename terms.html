@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Terms of Service — AesthetIQ</title>
+  <meta name="description" content="AesthetIQ Terms of Service — the terms governing your use of goaesthetiq.com." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --onyx:       #0E0E0E;
+      --carbon:     #2A2A2A;
+      --sand:       #B89E7A;
+      --sand-dark:  #8A7A5E;
+      --sand-light: #D8C8A8;
+      --dune:       #EDE8DC;
+      --linen:      #F7F4EE;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans:  'Inter', system-ui, sans-serif;
+      --page-pad: clamp(1.5rem, 5vw, 6rem);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--linen);
+      color: var(--carbon);
+      font-family: var(--font-sans);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { text-decoration: none; color: inherit; }
+
+    /* ─── NAV ── */
+    #navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background-color: var(--onyx);
+      width: 100%;
+    }
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 var(--page-pad);
+      height: 64px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .wordmark {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 400;
+      color: var(--linen);
+    }
+    .wordmark span { color: var(--sand); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--sand-dark);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--sand); }
+    .nav-cta {
+      background-color: var(--sand);
+      color: var(--onyx) !important;
+      font-weight: 600 !important;
+      padding: 0.5rem 1.25rem;
+      border-radius: 6px;
+      font-size: 13px !important;
+    }
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+    .nav-hamburger span {
+      display: block;
+      width: 22px;
+      height: 1.5px;
+      background-color: var(--sand-light);
+    }
+
+    /* ─── PAGE CONTENT ── */
+    .legal-page {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: clamp(3rem, 6vw, 5rem) var(--page-pad) clamp(4rem, 8vw, 6rem);
+    }
+
+    .back-link {
+      display: inline-block;
+      font-family: var(--font-sans);
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--sand);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.02em;
+      transition: opacity 0.2s;
+    }
+    .back-link:hover { opacity: 0.75; }
+
+    .legal-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 4vw, 2.25rem);
+      font-weight: 400;
+      color: var(--onyx);
+      line-height: 1.2;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-date {
+      font-family: var(--font-sans);
+      font-size: 13px;
+      color: var(--sand-dark);
+      margin-bottom: 0.35rem;
+    }
+
+    .legal-divider {
+      border: none;
+      border-top: 1px solid var(--sand-light);
+      margin: 2rem 0;
+    }
+
+    .legal-intro {
+      font-size: 14px;
+      color: var(--carbon);
+      line-height: 1.75;
+      margin-bottom: 2rem;
+    }
+
+    .attorney-note {
+      background-color: var(--dune);
+      border-left: 3px solid var(--sand);
+      padding: 0.85rem 1.25rem;
+      font-size: 13px;
+      color: var(--sand-dark);
+      margin-bottom: 2.5rem;
+      border-radius: 0 4px 4px 0;
+    }
+
+    .legal-section {
+      margin-bottom: 2.25rem;
+    }
+
+    .legal-section h2 {
+      font-family: var(--font-sans);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--onyx);
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-section h3 {
+      font-family: var(--font-sans);
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--carbon);
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+    }
+
+    .legal-section p {
+      font-size: 14px;
+      color: var(--carbon);
+      line-height: 1.75;
+      margin-bottom: 0.75rem;
+    }
+
+    .legal-section p.caps {
+      font-size: 13px;
+      color: var(--carbon);
+      line-height: 1.7;
+    }
+
+    .legal-section ul {
+      list-style: none;
+      padding: 0;
+      margin: 0.5rem 0 0.75rem;
+    }
+
+    .legal-section ul li {
+      font-size: 14px;
+      color: var(--carbon);
+      line-height: 1.75;
+      padding-left: 1.25rem;
+      position: relative;
+      margin-bottom: 0.4rem;
+    }
+
+    .legal-section ul li::before {
+      content: '—';
+      position: absolute;
+      left: 0;
+      color: var(--sand);
+      font-size: 12px;
+    }
+
+    /* ─── FOOTER ── */
+    #footer {
+      background-color: var(--onyx);
+      border-top: 1px solid var(--sand);
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 4rem var(--page-pad) 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 3rem;
+    }
+    .footer-col-left p { font-size: 13px; color: var(--sand-dark); line-height: 1.7; margin-top: 0.5rem; }
+    .footer-wordmark { font-family: var(--font-serif); font-size: 18px; color: var(--linen); margin-bottom: 0.75rem; }
+    .footer-wordmark span { color: var(--sand); }
+    .footer-rule { border: none; border-top: 1px solid var(--sand); margin-bottom: 0.75rem; }
+    .footer-tagline { font-family: var(--font-sans); font-size: 10px; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--sand-dark); }
+    .footer-col-right .get-in-touch { font-size: 10px; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--sand-dark); margin-bottom: 0.6rem; }
+    .footer-email { font-size: 14px; font-weight: 600; color: var(--linen); display: block; margin-bottom: 0.35rem; }
+    .footer-email:hover { color: var(--sand); }
+    .footer-col-right p { font-size: 13px; color: var(--sand-dark); line-height: 1.7; }
+    .footer-bottom { background-color: #090909; margin-top: 3rem; padding: 1rem var(--page-pad); text-align: center; }
+    .footer-bottom p { font-size: 12px; color: var(--sand-dark); }
+
+    @media (max-width: 900px) {
+      .footer-inner { grid-template-columns: 1fr; gap: 2rem; }
+    }
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .nav-hamburger { display: flex; }
+      .nav-links.open {
+        display: flex; flex-direction: column;
+        position: absolute; top: 64px; left: 0; right: 0;
+        background-color: var(--onyx);
+        padding: 1.5rem var(--page-pad); gap: 1.25rem;
+        border-top: 1px solid #1e1e1e; z-index: 99;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <a href="/" class="wordmark">Aesthet<span>IQ</span></a>
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/#problem">The Problem</a></li>
+          <li><a href="/#automations">Automations</a></li>
+          <li><a href="/#process">Process</a></li>
+          <li><a href="/#packages">Packages</a></li>
+          <li><a href="mailto:hello@goaesthetiq.com?subject=Free%20Quick%20Win%20Kit%20Request" class="nav-cta">Get your free kit</a></li>
+        </ul>
+      </nav>
+      <button class="nav-hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- CONTENT -->
+  <main class="legal-page">
+
+    <a href="/" class="back-link">← Back to home</a>
+
+    <h1 class="legal-title">Terms of Service</h1>
+    <p class="legal-date">Effective date: April 20, 2025 &nbsp;·&nbsp; Applies to all visitors to goaesthetiq.com</p>
+
+    <hr class="legal-divider" />
+
+    <p class="legal-intro">
+      These Terms of Service ("Terms") govern your access to and use of the AesthetIQ website located at goaesthetiq.com ("Site"). By accessing or using the Site, you agree to be bound by these Terms. If you do not agree, do not use the Site.
+    </p>
+
+    <div class="attorney-note">
+      Attorney review required before publishing. This document is a baseline template and does not constitute legal advice.
+    </div>
+
+    <div class="legal-section">
+      <h2>1. About AesthetIQ</h2>
+      <p>AesthetIQ is an AI automation agency that provides marketing automation, patient communication systems, and related services to med spas, aesthetic clinics, and health and wellness businesses. Our principal place of business is in Wisconsin. Contact us at <a href="mailto:hello@goaesthetiq.com" style="color:var(--sand);">hello@goaesthetiq.com</a>.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>2. Use of the website</h2>
+      <h3>2.1 Permitted use</h3>
+      <p>You may use the Site to learn about our services, contact us, and request information. You must use the Site in compliance with all applicable laws and these Terms.</p>
+      <h3>2.2 Prohibited conduct</h3>
+      <p>You agree not to:</p>
+      <ul>
+        <li>Use the Site for any unlawful purpose or in violation of these Terms</li>
+        <li>Attempt to gain unauthorized access to any part of the Site or our systems</li>
+        <li>Transmit any malicious code, viruses, or harmful content</li>
+        <li>Scrape, crawl, or extract data from the Site without our express written permission</li>
+        <li>Impersonate AesthetIQ or any of our personnel</li>
+        <li>Use the Site to send unsolicited commercial communications</li>
+      </ul>
+    </div>
+
+    <div class="legal-section">
+      <h2>3. Intellectual property</h2>
+      <p>All content on the Site — including text, graphics, logos, images, and software — is owned by AesthetIQ or our licensors and is protected by applicable intellectual property laws. You may not reproduce, distribute, modify, or create derivative works from any Site content without our prior written consent. The AesthetIQ name, logo, and wordmark are our proprietary trademarks.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>4. Free Quick Win Kit</h2>
+      <p>When you request a free Quick Win Kit through our Site, you agree that: (a) the kit is provided for informational and demonstration purposes only, (b) AesthetIQ retains all intellectual property rights in the kit content unless you enter into a paid service agreement, (c) we may follow up with you via the contact information you provide, and (d) receiving a kit does not create a client relationship or any obligation on either party.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>5. Disclaimers</h2>
+      <p class="caps">THE SITE AND ITS CONTENT ARE PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED. WE DISCLAIM ALL WARRANTIES INCLUDING IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. WE DO NOT WARRANT THAT THE SITE WILL BE UNINTERRUPTED, ERROR-FREE, OR FREE OF VIRUSES OR OTHER HARMFUL COMPONENTS.</p>
+      <p>Results described on our Site, including revenue recovery estimates and automation performance metrics, are based on historical client data and are not guarantees of future performance. Individual results will vary based on factors including clinic size, patient volume, geographic market, and service mix.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>6. Limitation of liability</h2>
+      <p class="caps">TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, AESTHETIQ AND ITS OFFICERS, DIRECTORS, EMPLOYEES, AND AGENTS SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES ARISING OUT OF OR RELATED TO YOUR USE OF OR INABILITY TO USE THE SITE. IN NO EVENT SHALL OUR TOTAL LIABILITY TO YOU EXCEED ONE HUNDRED DOLLARS ($100).</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>7. Third-party services</h2>
+      <p>Our Site may reference or link to third-party services including GoHighLevel, Zapier, Google, Meta, and others. We are not responsible for the content, terms, or practices of third-party services. Your use of third-party services is subject to their respective terms of service and privacy policies.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>8. Governing law and disputes</h2>
+      <p>These Terms are governed by the laws of the State of Wisconsin without regard to its conflict of law principles. Any disputes arising from these Terms or your use of the Site shall be resolved through binding arbitration in Wisconsin in accordance with the rules of the American Arbitration Association, except that either party may seek injunctive relief in a court of competent jurisdiction for intellectual property violations.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>9. Changes to these Terms</h2>
+      <p>We may modify these Terms at any time by posting updated Terms on the Site with a new effective date. Your continued use of the Site after changes are posted constitutes acceptance of the modified Terms.</p>
+    </div>
+
+    <div class="legal-section">
+      <h2>10. Contact</h2>
+      <p>Questions about these Terms: <a href="mailto:hello@goaesthetiq.com" style="color:var(--sand);">hello@goaesthetiq.com</a> &nbsp;·&nbsp; <a href="https://goaesthetiq.com" style="color:var(--sand);">goaesthetiq.com</a></p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="footer">
+    <div class="footer-inner">
+      <div class="footer-col-left">
+        <p>AI automation for aesthetic practices</p>
+        <p>Reviews · Reminders<br />Upsells · Instant reply</p>
+      </div>
+      <div style="text-align:center;">
+        <div class="footer-wordmark">Aesthet<span>IQ</span></div>
+        <hr class="footer-rule" />
+        <p class="footer-tagline">For Aesthetic Practices</p>
+      </div>
+      <div style="text-align:right;">
+        <p class="get-in-touch">Get in touch</p>
+        <a href="mailto:hello@goaesthetiq.com" class="footer-email">hello@goaesthetiq.com</a>
+        <p><a href="https://goaesthetiq.com" style="color:var(--sand-dark);">goaesthetiq.com</a></p>
+        <p>Nationwide · By referral</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>© 2025 AesthetIQ · All rights reserved · goaesthetiq.com &nbsp;·&nbsp; <a href="/privacy.html" style="color:var(--sand-dark);text-decoration:none;">Privacy Policy</a> &nbsp;·&nbsp; <a href="/terms.html" style="color:var(--sand-dark);text-decoration:none;">Terms of Service</a></p>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => navLinks.classList.toggle('open'));
+    navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => navLinks.classList.remove('open')));
+  </script>
+
+</body>
+</html>
